@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --border: 2px solid black;
+}
+
+button {
+    border: none;
+    font-family: inherit;
+}
+
+a {
+    margin-top: 3.5rem;
+}
+
+.calculator-container {
+    display: grid;
+    flex-direction: column;
+    width: 40%;
+    min-width: 350px;
+    max-width: 450px;
+    height: auto;
+    min-height: 470px;
+    margin-top: 2rem;
+    background-color: grey;
+    padding: 1rem;
+}
+
+.result {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: end;
+    background-color: black;
+    height: 70px;
+    width: 100%;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2.5rem;
+    padding: 0 1rem 0.5rem 0;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    font-size: 2rem;
+    background-color: rgb(183, 182, 182);
+    border-radius: 10%;
+}
+
+.operator-box {
+    background-color: rgb(219, 143, 2);
+}
+
+.operator-box:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.calculator-inside {
+    display: grid;
+    grid-template-areas:
+        "numbers operators"
+        "bottom-zero-dot operators";
+        grid-template-columns: 3fr 1fr;
+    width: 100%;
+}
+
+.numbers {
+    grid-area: numbers;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-weight: 400;
+}
+
+.top-row-numbers {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    width: 100%;
+}
+
+.clear {
+    border-right: var(--border);
+    border-bottom: var(--border);
+}
+
+.clear:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.back {
+    border-bottom: var(--border);
+    border-right: var(--border);
+} 
+
+.back:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.numbers-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.numbers-content > button {
+    border-bottom: var(--border);
+    border-right: var(--border);
+}
+
+.numbers-content > .box:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.zero-dot {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-area: bottom-zero-dot;
+}
+
+.zero {
+    background-color: rgb(183, 182, 182);
+    border-right: var(--border);
+}
+
+.zero:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.dot {
+    background-color: rgb(183, 182, 182);
+    border-right: var(--border);
+}
+
+.dot:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.operators {
+    grid-area: operators;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 2.5rem;
+}
+
+.operators > button {
+    border-bottom: var(--border);
+    color: white;
+}
+
+.operators > button:last-child {
+    border-bottom: none;
+}
+
+@media screen and (min-width: 1100px) {
+    .box {
+        height: 90px;
+    }
+}
+
