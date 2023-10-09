@@ -48,6 +48,7 @@ a {
     font-family: 'Courier New', Courier, monospace;
     font-size: 2.5rem;
     padding: 0 1rem 0.5rem 0;
+    border-radius: 10%;
 }
 
 .box {
@@ -121,6 +122,7 @@ a {
 .numbers-content > button {
     border-bottom: var(--border);
     border-right: var(--border);
+    color: black;
 }
 
 .numbers-content > .box:hover {
